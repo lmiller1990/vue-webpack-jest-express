@@ -1,0 +1,37 @@
+{
+	"name": "testing-vue-components",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "nodemon -e .vue,.js --ignore lib,files --exec babel-node src/server/index.js",
+		"dev:wds": "webpack-dev-server --progress",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-env": "^1.6.0",
+		"jest-vue-preprocessor": "^1.1.0",
+		"vue-loader": "^13.0.4",
+		"webpack": "^3.5.5",
+		"webpack-dev-server": "^2.7.1"
+	},
+	"dependencies": {
+		"express": "^4.15.4",
+		"jest": "^20.0.4",
+		"vue": "^2.4.2",
+		"vue-template-compiler": "^2.4.2"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"js",
+			"vue"
+		],
+		"transform": {
+			"^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+			".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+		}
+	}
+}
