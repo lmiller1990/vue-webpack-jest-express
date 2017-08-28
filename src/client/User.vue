@@ -1,13 +1,12 @@
 <template>
   <div>
-		<router-view></router-view>
+			{{ $route.params.user }}
   </div>
 </template>
 
 <script>
-
   export default {
-    name: 'App'
+    name: 'User'
   }
 </script>
 
